@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Links with Dropdown</title>
+    <style>
+        body {
+            display: flex;
+	    display: flex;
+       	    justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('6.jpg'); /* Replace with the actual path to your background image */
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .button-container {
+            display: flex; /* Display buttons horizontally */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue color, you can change it */
+            color: #fff; /* Text color */
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px; /* Add margin between buttons */
+        }
+
+        /* New CSS to make Semester links look like buttons */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add more styles as needed for button appearance */
+
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <div class="dropdown">
+            <button class="button" id="year1-button" onclick="openYear1()">Year 1</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="button" id="year2-button" onclick="openYear2()">Year 2</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="button" id="year3-button" onclick="openYear3()">Year 3</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="button" id="year4-button" onclick="openYear4()">Year 4</button>
+        </div>
+    </div>
+
+    <script>
+        function openYear1() {
+            window.location.href = "time table.html";
+        }
+
+        function openYear2() {
+            window.location.href = "time table.html";
+        }
+
+        function openYear3() {
+            window.location.href = "time table.html";
+        }
+
+        function openYear4() {
+            window.location.href = "time table.html";
+        }
+    </script>
+</body>
+</html>

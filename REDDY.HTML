@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+    <style>
+	body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+            background-image: url('7.jpg'); /* Replace 'your-image.jpg' with your image file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Ensures the background image doesn't scroll with the content */
+        }
+
+        /* The rest of your CSS styles remain the same as in your original code */
+
+        header {
+            background-color: rgba(0, 123, 255, 0.8); /* Use an RGBA color for transparency */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+            background-color: #f0f0f0; /* Background color for the entire page */
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .marquee-container {
+            font-size: 18px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            animation: marquee-scroll 10s linear infinite;
+        }
+
+        @keyframes marquee-scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Flexbox styles for button container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Lab manuals section with the same background color */
+        #manualsSection {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://content3.jdmagicbox.com/comp/guntur/y5/9999px863.x863.170603173843.h4y5/catalogue/a-m-reddy-memorial-college-of-engineering-and-technology-uppalapadu-guntur-colleges-yx5jy2x6wz.jpg?clr=" alt="logo" width="75" height="75">
+        <h1>A.M.REDDY MEMORIAL COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+    </header>
+
+
+
+   <div class="container">
+        <p align="center">3rd B.Tech C.S.E</p>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                WELCOME 
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="timetableButton">TIME TABLE</button>
+            <button><a href="years.html" target="_blank" style="color: #fff;">JNTUK Academic Calendar</a></button>
+            <button><a href="inside manuals.html" style="color: #fff;">MANUALS</a></button>
+            <!-- "Materials" button added here -->
+            <button><a href="R 20 & R 23.html" style="color: #fff;">MATERIALS</a></button>
+        </div>
+
+        <!-- Lab manuals section with the same background color -->
+        <div id="manualsSection" style="display: none;">
+            <h2>Lab Manuals</h2>
+            <ul id="manualsList">
+                <li><a href="https://drive.google.com/file/d/1uXNsNuQwg-YxQzp4HbjoP2KGnPRGX4xR/view?usp=sharing" target="_blank">CN Lab Manual</a></li>
+                <li><a href="https://drive.google.com/file/d/1A5Zf9_b52PTAcJQWRvUBwCY2U5VHqfwQ/view?usp=sharing" target="_blank">NP Lab Manual</a></li>
+                <li><a href="https://docs.google.com/document/d/1piTN5uYnGegOisQmCgDUrzdpe2GeAGm-/edit?usp=sharing&ouid=114361732013561791221&rtpof=true&sd=true" target="_blank">DWDM Lab Manual</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to open a new tab with "CSE" and "CS" buttons when clicking "TIME TABLE"
+        document.getElementById("timetableButton").addEventListener("click", function () {
+            // Open a new tab
+            const newTab = window.open('', '_blank');
+
+            // Check if the new tab has been successfully opened
+            if (newTab) {
+                // Write the HTML content for the new tab
+                newTab.document.write(`
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Time Table</title>
+                        <style>
+                            /* Center align the buttons */
+                            body {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                margin: 0;
+				font-family: Arial, sans-serif;
+            			margin: 0;
+           		        padding: 0;
+           		        transition: background-color 0.5s;
+         	                background-image: url('7.jpg'); /* Replace 'your-image.jpg' with your image file path */
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-attachment: fixed;
+                            }
+                            /* Style the buttons */
+                            button {
+                                background-color: #007bff;
+                                color: #fff;
+                                border: none;
+                                padding: 10px 20px;
+                                font-size: 16px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s;
+                                margin: 10px;
+                            }
+                            button a {
+                                text-decoration: none;
+                                color: #fff;
+                            }
+                            button:hover {
+                                background-color: #0056b3; /* Darker blue on hover */
+                            }
+                        </style>
+                    </head>
+                    <body>
+		    
+                        <button><a href="cse_time table.html" target="_blank">CSE</a></button>
+                        <button><a href="cs_time table.html" target="_blank">CS</a></button>
+                    </body>
+                    </html>
+                `);
+
+                // Close the document to make it final
+                newTab.document.close();
+            } else {
+                alert('The new tab could not be opened. Please enable pop-ups for this website.');
+            }
+        });
+    </script>
+</body>
+</html>

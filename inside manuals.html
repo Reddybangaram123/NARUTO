@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body 
+{
+     display: flex;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+     background-image: url('7.jpg'); 
+     background-size: cover; /* Adjust the background size as needed */
+     background-repeat: no-repeat;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+ }  
+  						/* Style for the buttons */
+  .year-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  						/* Style for the button container */
+  .button-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+ 						 /* Style for the lab manual links */
+  .lab-link {
+    margin: 5px;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+  <button class="year-button" onclick="openYear(1)">Year 1</button>
+  <button class="year-button" onclick="openYear(2)">Year 2</button>
+  <button class="year-button" onclick="openYear(3)">Year 3</button>
+  <button class="year-button" onclick="openYear(4)">Year 4</button>
+</div>
+
+<script>
+  // JavaScript function to open lab manuals for a specific year
+  function openYear(year) {
+    var labManuals = [
+      [
+        "<button><br><a class='lab-link' href='year1_lab1.html' target='_blank'>👉Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='year1_lab2.html' target='_blank'>👉Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='year1_lab3.html' target='_blank'>👉Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='year1_lab4.html' target='_blank'>👉Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='year1_lab5.html' target='_blank'>👉Lab Manual</a></button></br>"
+      ],
+      [
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/1A16lvftZD7XXmSXkH9zLnVH4SG1FCX-B/view?usp=sharing' target='_blank'>👉DBMS Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/1LWV7J4hrqz9UnNCASxxt1VRBor6Vv7Ag/view?usp=sharing' target='_blank'>👉DS Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/1OEiVz8H01iwD5P0Izhv-qdiGrtQsx4gY/view?usp=sharing' target='_blank'>👉JAVA Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/11E2QDSbJqqLBLji-yiP40fFYvpxvTQ8I/view?usp=sharing' target='_blank'>👉R Programming Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/1HI1zQ_qBxkM5zME9D25jW10QduHJG1JI/view?usp=sharing' target='_blank'>👉soc pandas Lab Manual</a></button></br>"
+      ],
+      [
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/1O-y07SbLYzcaBsvry-jMvMwZabtw_4GD/view?usp=sharing' target='_blank'>👉CN Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://drive.google.com/file/d/1mMAVoo7uJ5zMFlj6hPYdkhMQdG9tuKAM/view?usp=sharing' target='_blank'>👉NP Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://docs.google.com/document/d/1cKb9YvAs6dQTEACfsTI-Jd_PS5wn8qsB/edit?usp=sharing&ouid=114361732013561791221&rtpof=true&sd=true' target='_blank'>👉DWDM Lab Manual</a></button></br>",
+        "<button><br><a class='lab-link' href='https://docs.google.com/document/d/17LcdqwSAwC6QtApNatyFad4ODeWAeTX5/edit?usp=sharing&ouid=114361732013561791221&rtpof=true&sd=true' target='_blank'>👉SE Lab Manual</a></button></br>",
+        
+      ],
+      [
+        "<button><br><a class='lab-link' href='year4_lab1.html' target='_blank'>👉Lab Manual</a></button></br>",
+        
+      ]
+    ];
+
+    var labManualHTML = labManuals[year - 1].join('<br>');
+
+    var newTab = window.open('', '_blank');
+    newTab.document.write(`<h2>Year ${year} Lab Manuals</h2>${labManualHTML}`);
+  }
+</script>
+
+</body>
+</html>

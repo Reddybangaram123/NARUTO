@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Links with Dropdown</title>
+    <style>
+        /* Center align the button container */
+        body {
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('7.jpg'); /* Replace with the actual path to your background image */
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat;
+            background-color: #f0f0f0; /* Add a background color */
+        }
+
+        .button-container {
+            display: flex; /* Display buttons horizontally */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue color, you can change it */
+            color: #fff; /* Text color */
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px; /* Add margin between buttons */
+        }
+
+        /* New CSS to make Semester links look like buttons */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add more styles as needed for button appearance */
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <div class="dropdown">
+            <button class="button" id="year1-button">Year 1</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="button" id="year2-button">Year 2</button>
+        </div>
+        <div class="dropdown">
+            <button class="button" id="year3-button">Year 3</button>
+        </div>
+        <div class="dropdown">
+            <button class="button" id="year4-button">Year 4</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to open new tab with Semester 1 and Semester 2 buttons when Year 1 buttons are clicked
+        document.addEventListener("DOMContentLoaded", function () {
+            const year1Button = document.getElementById("year1-button");
+            const year2Button = document.getElementById("year2-button");
+            const year3Button = document.getElementById("year3-button");
+            const year4Button = document.getElementById("year4-button");
+
+            function openNewTabWithButtons(buttonsHTML) {
+                // Open a new tab with a blank HTML document
+                const newTab = window.open("about:blank");
+
+                // Define the content for the new tab with centered buttons
+                const newTabContent = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Semesters</title>
+                        <style>
+                            /* Center align the buttons */
+                            body {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 100vh;
+                                margin: 0;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        ${buttonsHTML}
+                    </body>
+                    </html>
+                `;
+
+                // Write the content to the new tab
+                newTab.document.open();
+                newTab.document.write(newTabContent);
+                newTab.document.close();
+            }
+
+            year1Button.addEventListener("click", function () {
+                const buttonsHTML = `
+                    <button class="button"><a href="1-1 cse materials.html" target="_blank">Semester 1</a></button>
+                    <button class="button"><a href="1-2 cse materials.html" target="_blank">Semester 2</a></button>
+                `;
+                openNewTabWithButtons(buttonsHTML);
+            });
+
+            year2Button.addEventListener("click", function () {
+                const buttonsHTML = `
+                    <button class="button"><a href="2-1 CSE MATERIALS.HTML" target="_blank">Semester 1</a></button>
+                    <button class="button"><a href="2-2 CSE MATERIALS.HTML" target="_blank">Semester 2</a></button>
+                `;
+                openNewTabWithButtons(buttonsHTML);
+            });
+
+            year3Button.addEventListener("click", function () {
+                const buttonsHTML = `
+                    <button class="button"><a href="3-1 CSE MATERIALS.HTML" target="_blank">Semester 1</a></button>
+                    <button class="button"><a href="3-3 CSE MATERIALS.HTML" target="_blank">Semester 2</a></button>
+                `;
+                openNewTabWithButtons(buttonsHTML);
+            });
+
+            year4Button.addEventListener("click", function () {
+                // Replace LINK_TO_YEAR4_SEMESTER1 and LINK_TO_YEAR4_SEMESTER2 with actual links
+                const buttonsHTML = `
+                    <button class="button"><a href="LINK_TO_YEAR4_SEMESTER1" target="_blank">Semester 1</a></button>
+                    <button class="button"><a href="LINK_TO_YEAR4_SEMESTER2" target="_blank">Semester 2</a></button>
+                `;
+                openNewTabWithButtons(buttonsHTML);
+            });
+        });
+    </script>
+</body>
+</html>
